@@ -1,0 +1,50 @@
+<html>
+<head>
+    <style>
+        body {
+            margin:0;
+            padding:0;
+            overflow:hidden;
+            background:transparent;
+            display:flex;
+            justify-content: center;
+            align-items: center;
+            height:100vh;
+        }
+
+        .sprite-container {
+            width:200px;
+            height:200px;
+            position:relative;
+            overflow:hidden;
+        }
+
+        img {
+            position: absolute;
+            width: 100%;
+            top: -25%;
+        }
+
+        #jump_counter {
+            position:absolute;
+            width:100%;
+            top:-25%;
+        }
+    </style>
+</head> <!-- no title needed cos we hide everything-->
+<body>
+<div class="sprite-container">
+    <img src="XXXX" alt="smiley face">
+</div>
+<p id="jump_counter">Jumps: </p>
+<script>
+    const text=document.getElementById('jump_counter')
+    let jumps = 0
+    setInterval(() => {
+        jumps++;
+        text.innerHTML = 'Jumps: '+ jumps;
+    })
+</script>
+
+</body>
+</html>
