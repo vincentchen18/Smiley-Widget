@@ -14,7 +14,7 @@
 
         .sprite-container {
             width:200px;
-            height:200px;
+            height:250px;
             position:relative;
             overflow:hidden;
         }
@@ -22,21 +22,24 @@
         img {
             position: absolute;
             width: 100%;
-            top: -25%;
         }
 
         #jump_counter {
             position:absolute;
             width:100%;
-            top:-25%;
+            bottom: 8px;
+            color:#ffffff;
+            background-color:#000000;
+            text-align:center;
         }
     </style>
 </head> <!-- no title needed cos we hide everything-->
 <body>
 <div class="sprite-container">
-    <img src="XXXX" alt="smiley face">
+    <img src="smiley.png" alt="smiley face">
+    <p id="jump_counter">Jumps: </p>
 </div>
-<p id="jump_counter">Jumps: </p>
+
 <script>
     const text=document.getElementById('jump_counter')
     let jumps = 0
