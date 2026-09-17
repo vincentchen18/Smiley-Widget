@@ -12,9 +12,14 @@
             height:100vh;
         }
 
+        @keyframes jump {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-40px); }
+            }
+
         .sprite-container {
-            width:200px;
-            height:250px;
+            width:100px;
+            height:200px;
             position:relative;
             overflow:hidden;
         }
@@ -22,12 +27,14 @@
         img {
             position: absolute;
             width: 100%;
+            top:50px;
+            animation: jump 1s infinite cubic-bezier(0.25, 1, 0.5, 1);
         }
 
         #jump_counter {
             position:absolute;
             width:100%;
-            bottom: 8px;
+            bottom: 20px;
             color:#ffffff;
             background-color:#000000;
             text-align:center;
@@ -37,7 +44,7 @@
 <body>
 <div class="sprite-container">
     <img src="smiley.png" alt="smiley face">
-    <p id="jump_counter">Jumps: </p>
+    <p id="jump_counter">Jumps: 0</p>
 </div>
 
 <script>
@@ -46,7 +53,7 @@
     setInterval(() => {
         jumps++;
         text.innerHTML = 'Jumps: '+ jumps;
-    })
+    }, 1000)
 </script>
 
 </body>
